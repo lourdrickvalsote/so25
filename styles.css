@@ -12,7 +12,7 @@ body {
     padding: 0;
 }
 header {
-    background: black;
+    background: white;
     background-image: url("images/header.jpeg");
     background-size: 100%;
     background-position: center;
