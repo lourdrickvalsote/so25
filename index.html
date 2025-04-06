@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,5 +8,57 @@
 <body>
   <h1>Hello, world!</h1>
   <p>This is my first basic HTML page.</p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collegiates Scoreboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .scoreboard {
+      max-width: 600px;
+      margin: auto;
+    }
+    .event {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .event:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="scoreboard">
+    <h1>Collegiates Scoreboard</h1>
+    <div id="events">
+      <!-- Event data will be inserted here by JavaScript -->
+    </div>
+  </div>
+
+  <script>
+    // Sample data representing event scores
+    const events = [
+      { name: 'Event 1', score: '95' },
+      { name: 'Event 2', score: '88' },
+      { name: 'Event 3', score: '76' }
+    ];
+
+    const eventsContainer = document.getElementById('events');
+
+    events.forEach(event => {
+      const eventDiv = document.createElement('div');
+      eventDiv.className = 'event';
+      eventDiv.innerHTML = `<strong>${event.name}</strong>: ${event.score}`;
+      eventsContainer.appendChild(eventDiv);
+    });
+  </script>
 </body>
 </html>
