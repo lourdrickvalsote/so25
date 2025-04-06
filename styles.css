@@ -12,14 +12,15 @@ body {
     padding: 0;
 }
 header {
-    background: white;
+    background: #b91c1c;
+    padding: 10px 20px;;
     background-image: url("images/header.jpeg");
     background-size: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 300px;
-    padding: 20px;
+    /* height: 300px; */
+    padding: 10px;
     text-align: center;
 }
 ul {
@@ -30,7 +31,7 @@ ul li {
 }
 h1 {
     color: black;
-    background-color: rgba(255, 255, 193, 0.39);
+    background-color: rgba(255, 255, 255, 0.9);
     background-position: center;
     border-radius: 15px;
     padding-left: 30px;
