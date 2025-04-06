@@ -14,7 +14,7 @@ body {
 header {
     background: #b91c1c;
     padding: 10px 20px;;
-    background-image: url("images/header.jpeg");
+    /* background-image: url("images/header.jpeg"); */
     background-size: 100%;
     background-position: center;
     background-size: cover;
