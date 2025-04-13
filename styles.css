@@ -14,7 +14,7 @@ html, body {
 body {
     background: rgb(140, 21, 21);
     color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
 }
@@ -31,16 +31,10 @@ header {
     width: 100%;
 }
 header#hero-header {
+    background-image: url("images/header.jpeg");
     width: 100vw;
     margin: 0;
-    padding: 0;
-    background: #40bc70;
-    background-image: url("images/header.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    
+    padding: 10px 0;    
     
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 1;
@@ -57,7 +51,7 @@ main {
     /*background-color: white;*/
     background-color: rgb(140, 21, 21);
     color: white;
-    font-size: larger;
+    font-size: xx-large;
     z-index: 2;
     position: relative;
 }
@@ -133,7 +127,6 @@ nav li.logo {
 }
 
 nav li.page {
-    background-color:rgb(219, 255, 219);
     margin: 0 150px;  
     font-size: x-large;         /* spacing between the other links */
 
@@ -143,3 +136,23 @@ nav li.page {
     text-align: center;
     
 }
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+  
+th, td {
+    color: white;
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+  
+th {
+    background-color: #40bc70;
+    color: white;
+}
+  
