@@ -1,8 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html, body {
     height: auto;
     min-height: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
 body {
     background: rgb(140, 21, 21);
@@ -12,17 +19,49 @@ body {
     padding: 0;
 }
 header {
-    background: #b91c1c;
-    padding: 10px 20px;;
+    background: #40bc70;
+    padding: 10px 20px;
     background-image: url("images/header.jpeg");
     background-size: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* height: 300px; */
     padding: 10px;
     text-align: center;
+    width: 100%;
 }
+header#hero-header {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: #40bc70;
+    background-image: url("images/header.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+    
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+#hero-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: block;
+}
+
+main {
+    padding: 50px;
+    /*background-color: white;*/
+    background-color: rgb(140, 21, 21);
+    color: white;
+    font-size: larger;
+    z-index: 2;
+    position: relative;
+}
+
 ul {
     list-style-type: none;
 }
@@ -30,12 +69,13 @@ ul li {
     display: block; 
 }
 h1 {
-    color: black;
+    color: rgb(140, 21, 21);
     background-color: rgba(255, 255, 255, 0.9);
     background-position: center;
     border-radius: 15px;
     padding-left: 30px;
     text-align: center;
+    margin-top: 15px;
 }
 h2 {
     color: black;
@@ -49,7 +89,7 @@ header li {
     color: rgb(0, 0, 0);
     text-decoration: none;
     text-transform: uppercase;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 header .logo a {
@@ -57,13 +97,12 @@ header .logo a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 50%;
     display: inline-block;
-    height: 150px;
+    height: 200px;
     position: relative;
     top: -20px;
     text-indent: -9999999px;
-    width: 115px;
+    width: 300px;
 }
 
 /* Features */
@@ -77,6 +116,16 @@ nav ul {
     padding: 0;
 }
 
+
+nav ul.nav-links {
+    display: flex;
+    justify-content: center; /* Center the group */
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 nav li.logo {
     flex-basis: 100%;         /* forces the logo to take a full row */
     text-align: center;
@@ -85,6 +134,12 @@ nav li.logo {
 
 nav li.page {
     background-color:rgb(219, 255, 219);
-    margin: 0 10px;           /* spacing between the other links */
+    margin: 0 150px;  
+    font-size: x-large;         /* spacing between the other links */
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
 }
