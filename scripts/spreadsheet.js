@@ -1,9 +1,10 @@
-let url = 'https://api.sheety.co/e5244ebf521dd022dc295c66fdcba0a7/taekwondoTestSpreadsheet/sheet1';
+let url = 'https://api.sheety.co/e5244ebf521dd022dc295c66fdcba0a7/taekwondoTestSpreadsheet/inputScoresColorBelts';
 
 fetch(url)
   .then(response => response.json())
   .then(json => {
-    const rows = json.sheet1; // Sheety returns an object with your tab name
+
+    const rows = json.inputScoresColorBelts; // Sheety returns an object with your tab name
 
     let html = "<table><thead><tr>";
 
@@ -26,12 +27,13 @@ fetch(url)
     rows.forEach(row => {
       html += "<tr>";
       keys.forEach(key => {
-        html += `<td>${row[key]}</td>`;
+        html += `<td>${row[key] ?? ""}</td>`;
+
       });
       html += "</tr>";
     });
 
     html += "</tbody></table>";
-
+    console.log(html);
     document.getElementById("sheet-data").innerHTML = html;
   });
