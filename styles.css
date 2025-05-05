@@ -48,7 +48,6 @@ header#hero-header {
 
 main {
     padding: 50px;
-    /*background-color: white;*/
     background-color: rgb(140, 21, 21);
     color: white;
     font-size: xx-large;
@@ -126,8 +125,8 @@ nav li.logo {
 }
 
 nav li.page {
-    margin: 0 150px;  
-    font-size: x-large;         /* spacing between the other links */
+    margin: 0 100px;  
+    font-size: x-large;         
 
     display: flex;
     justify-content: center;
@@ -135,6 +134,57 @@ nav li.page {
     text-align: center;
     
 }
+
+/* 1) make the UL a flex‐row of two columns */
+ul.header-list {
+    display: flex;            /* side‑by‑side <li>’s */
+    gap: 1rem;                /* space between the two columns */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* 2) make each column a vertical flex container */
+  .header-list .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;   /* stack H2 over SECTION */
+    height: 300px;            /* total height of each column */
+    background: rgb(140,21,21);
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  
+  /* 3) style the H2 so it stays at top and doesn’t stretch */
+  .header-list .col > h2 {
+    flex: 0 0 auto;           /* do not grow or shrink */
+    margin: 0 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  /* 4) make the section fill the remaining space and scroll */
+  .header-list .col > section {
+    flex: 1 1 auto;           /* fill leftover vertical space */
+    overflow: auto;           /* scroll if content overflows */
+    background: rgba(255,255,255,0.8);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+
+/*div.col > h2 {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.39);
+    background-position: center;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}*/
 
 table {
     width: 80%;
