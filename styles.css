@@ -216,3 +216,123 @@ th {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Optional shadow */
   }
   
+
+
+/* Bracketing */
+.bracket-sym {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  /* Common round styling */
+  .round {
+    display: grid;
+    row-gap: 2rem;
+    position: relative;
+  }
+  
+  /* Match box */
+  .match {
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    position: relative;
+  }
+  .team {
+    color: black;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+  .team:last-child {
+    border-bottom: none;
+  }
+  
+/* ——— Left side ——— */
+
+/* horizontal connector from QF & SF left into the next round */
+.round.left .match::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1.5rem;
+    width: 1.5rem;
+    height: 2px;
+    background: black;
+  }
+  
+  /* vertical feed‑in only on SF left */
+  .round.sf.left .match::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    width: 2px;
+    /* span the two feeding matches */
+    height: calc(9rem);
+    top: -1rem;
+    background: black;
+  }
+  
+  /* ——— Right side ——— */
+  
+  /* horizontal connector from QF & SF right into the next round */
+  .round.right .match::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -1.5rem;
+    width: 1.5rem;
+    height: 2px;
+    background: black;
+  }
+  
+  /* vertical feed‑in only on SF right */
+  .round.sf.right .match::after {
+    content: "";
+    position: absolute;
+    right: -1.5rem;
+    width: 2px;
+    height: calc(9rem);
+    top: -1rem;
+    background: black;
+  }
+  .round.sf.left .match::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -1.5rem;
+    width: 1.5rem;
+    height: 2px;
+    background: black;
+  }
+ 
+  
+  
+  /* ——— Semifinal Right: horizontal on the RIGHT side ——— */
+  .round.sf.right .match::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1.5rem;   /* out into the gap on the right */
+    width: 1.5rem;
+    height: 2px;
+    background: black;
+  }
+  
+  .round.final .match::before {
+    left: -1.5rem;
+  }
+  .round.final .match::after {
+    right: -1.5rem;
+  }
+ 
+
+  
+   
+
+  
+  
