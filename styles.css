@@ -58,6 +58,12 @@ header {
     text-align: center;
     color: var(--white);
 }
+@media (max-width: 768px) {
+    header {
+        justify-content: flex-end;
+    }
+
+}
 
 header::before {
     content: '';
@@ -173,17 +179,6 @@ nav li.page a {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* nav li.page a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-gold);
-    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: -1;
-} */
 
 nav li.page a:hover::before {
     left: 0;
@@ -195,6 +190,39 @@ nav li.page a:hover {
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     border-color: var(--stanford-gold);
 }
+
+@media (max-width: 768px) {
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;      /* optional breathing room */
+      gap: 0.5rem;        /* small gap between items */
+    }
+  
+    /* make every link a block so widths apply */
+    nav li.page {
+      flex: 0 0 auto;     /* don’t grow or shrink */
+      margin: 0;          /* reset desktop side-margins */
+    }
+  
+    /* first two items: 50% each */
+    nav li.page:nth-child(2),
+    nav li.page:nth-child(3), 
+    nav li.page:nth-child(4),
+    nav li.page:nth-child(5) {
+      width: 50%;
+    }
+  
+    
+    /* adjust the <a> inside to fill its parent */
+    nav li.page a {
+      display: block;
+      text-align: center;
+      padding: 0.75rem 0;  /* vertically comfy tappable area */
+      margin: 0.25rem;     /* tiny gap all around */
+    }
+  }
 
 /* Modern Typography */
 h1 {
@@ -715,6 +743,15 @@ ul.header-list {
     background: var(--white);
     height: 400px;
     overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .header-list .col {
+        min-height: 500px;
+    }
+    .header-list .col > section {
+        min-height: 400px;
+    }
 }
 
 .header-list .col > section ul {
