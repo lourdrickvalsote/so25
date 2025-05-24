@@ -232,6 +232,13 @@ h2::after {
     border-radius: 2px;
 }
 
+iframe {
+    /* fill the viewport */
+    width: 90vw;
+    height: 100vh;
+    border: none;
+  }
+
 /* Hero Section Enhancements */
 .hero-subtitle {
     font-size: 1.4rem;
@@ -664,6 +671,7 @@ ul.header-list {
 .header-list .col {
     background: var(--white);
     border-radius: 20px;
+    min-height: 600px;
     overflow: hidden;
     box-shadow: var(--shadow-heavy);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -705,7 +713,7 @@ ul.header-list {
 .header-list .col > section {
     padding: 2.5rem;
     background: var(--white);
-    height: 280px;
+    height: 400px;
     overflow-y: auto;
 }
 
